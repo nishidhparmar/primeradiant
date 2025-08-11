@@ -10,6 +10,7 @@ import CodeIcon from '@/assets/icons/animated/code.json';
 import CommunicationIcon from '@/assets/icons/animated/communication.json';
 import DeploymentIcon from '@/assets/icons/animated/profit.json';
 import { motion } from 'framer-motion';
+import { DotLottieReact } from '@lottiefiles/dotlottie-react'
 
 const WhyChooseUsSection = () => {
     const reasons = [
@@ -72,24 +73,36 @@ const WhyChooseUsSection = () => {
             >
                 <Heading>Why Businesses Trust Primeradiant</Heading>
             </motion.div>
+            <div className='flex  gap-4 w-full'>
+                <div className='w-1/2'>
+                    <DotLottieReact
+                        src="/pyramid.lottie"
+                        loop
+                        autoplay
+                    />
 
-            <motion.div
-                className='flex flex-col w-full gap-4'
-                variants={containerVariants}
-                initial="hidden"
-                whileInView="visible"
-            >
-                {reasons.map((reason, index) => (
+                </div>
+                <div className='w-1/2'>
                     <motion.div
-                        key={index}
-                        variants={cardVariants}
+                        className='flex flex-col w-full gap-4'
+                        variants={containerVariants}
+                        initial="hidden"
+                        whileInView="visible"
                     >
-                        <HorizontalCard icon={reason.icon}>
-                            {reason.text}
-                        </HorizontalCard>
+                        {reasons.map((reason, index) => (
+                            <motion.div
+                                key={index}
+                                variants={cardVariants}
+                            >
+                                <HorizontalCard icon={reason.icon}>
+                                    {reason.text}
+                                </HorizontalCard>
+                            </motion.div>
+                        ))}
                     </motion.div>
-                ))}
-            </motion.div>
+                </div>
+            </div>
+
         </Container>
     )
 }

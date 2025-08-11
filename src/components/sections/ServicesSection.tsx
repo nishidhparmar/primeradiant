@@ -10,6 +10,7 @@ import BackendIcon from '@/assets/icons/animated/backend.json';
 import CloudIcon from '@/assets/icons/animated/cloud.json';
 import AIAssistantIcon from '@/assets/icons/animated/ai.json';
 import { motion } from 'framer-motion';
+import CustomerIcon from '@/assets/icons/animated/customers.json';
 
 const ServicesSection = () => {
     const services = [
@@ -37,7 +38,14 @@ const ServicesSection = () => {
             icon: <AnimatedIcon icon={AIAssistantIcon} size={80} />,
             title: 'AI-Assisted Coding',
             description: 'Leveraging AI to speed up development, optimize code, and bring innovative AI-driven features to your product.'
-        }
+        },
+        {
+            icon: <AnimatedIcon icon={CustomerIcon} size={80} />,
+            title: 'Digital Marketing & Growth',
+            description: 'We help your product reach the right audience through targeted SEO, paid ads, social media campaigns, and content marketing — driving visibility, engagement, and conversions.'
+        },
+
+
     ];
 
     const containerVariants = {
@@ -69,6 +77,7 @@ const ServicesSection = () => {
     };
 
     return (
+
         <Container className='py-20 flex flex-col gap-10'>
             <motion.div
                 initial={{ opacity: 0, y: 20 }}

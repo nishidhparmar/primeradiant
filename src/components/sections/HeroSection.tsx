@@ -4,6 +4,7 @@ import Container from '../layouts/Container'
 import Button from '../buttons/Button'
 import DotVantaBackground from '../DotVantaBackground'
 import { motion } from 'framer-motion'
+import Link from 'next/link'
 
 const HeroSection = () => {
     return (
@@ -15,8 +16,8 @@ const HeroSection = () => {
                             initial={{ opacity: 0, y: 100 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.5 }}
-                            className='text-5xl font-semibold text-white'>Powering Your Ideas into Reality — Smarter, Faster, Better</motion.div>
-                        <p className='text-lg'>At Primeradiant, we craft exceptional digital experiences — from stunning UI/UX to scalable backend systems, cloud solutions, and AI-assisted development. We bring your vision to life with precision and speed.</p>
+                            className='text-5xl font-semibold text-white'>Powering Your Ideas into Reality Smarter, Faster, Better</motion.div>
+                        <p className='text-lg'>At Primeradiant, we craft exceptional digital experiences from stunning UI/UX to scalable backend systems, cloud solutions, and AI-assisted development. We bring your vision to life with precision and speed.</p>
                         {/* <motion.p
                             initial={{ opacity: 0, y: 100 }}
                             animate={{ opacity: 1, y: 0 }}
@@ -24,14 +25,16 @@ const HeroSection = () => {
                             className='text-lg'
                         >
                             <TypingAnimation
-                                text="At Primeradiant, we craft exceptional digital experiences — from stunning UI/UX to scalable backend systems, cloud solutions, and AI-assisted development. We bring your vision to life with precision and speed."
+                                text="At Primeradiant, we craft exceptional digital experiences from stunning UI/UX to scalable backend systems, cloud solutions, and AI-assisted development. We bring your vision to life with precision and speed."
                                 speed={50}
                                 delay={1000}
                             />
                         </motion.p> */}
                     </div>
                     <div className='flex gap-4'>
-                        <Button>Our services</Button>
+                        <Link href='/#services'>
+                            <Button>Our services</Button>
+                        </Link>
                         <Button>Get in touch</Button>
                     </div>
                 </div>

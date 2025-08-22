@@ -32,7 +32,7 @@ const ServicesSection = () => {
         {
             icon: <AnimatedIcon icon={CloudIcon} size={80} />,
             title: 'Cloud Solutions',
-            description: 'Deploy, scale, and manage your applications with AWS, Azure, and GCP — ensuring security and uptime at scale.'
+            description: 'Deploy, scale, and manage your applications with AWS, Azure, and GCP ensuring security and uptime at scale.'
         },
         {
             icon: <AnimatedIcon icon={AIAssistantIcon} size={80} />,
@@ -42,7 +42,7 @@ const ServicesSection = () => {
         {
             icon: <AnimatedIcon icon={CustomerIcon} size={80} />,
             title: 'Digital Marketing & Growth',
-            description: 'We help your product reach the right audience through targeted SEO, paid ads, social media campaigns, and content marketing — driving visibility, engagement, and conversions.'
+            description: 'We help your product reach the right audience through targeted SEO, paid ads, social media campaigns, and content marketing driving visibility, engagement, and conversions.'
         },
 
 
@@ -77,35 +77,48 @@ const ServicesSection = () => {
     };
 
     return (
+        <div className='relative overflow-hidden'>
+            <div className='rotate-[140deg]   2xl:hidden bg-primary/50 w-[400px] h-[400px] absolute top-30 -left-20 z-0' >
+            </div>
+            <div className='rotate-45 2xl:hidden bg-primary/50 w-[300px] h-[300px] absolute bottom-20 -right-10 z-0' >
+            </div>
+            {/* <div className='rotate-45 2xl:hidden bg-primary w-[200px] h-[200px] absolute bottom-[20%] right-[70%] z-0' style={{ clipPath: 'polygon(50% 0%, 0% 100%, 100% 100%)' }}>
+            </div> */}
 
-        <Container className='py-20 flex flex-col gap-10'>
-            <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-            >
-                <Heading>What We Do</Heading>
-            </motion.div>
-            <motion.div
-                className='grid grid-cols-3 gap-4'
-                variants={containerVariants}
-                initial="hidden"
-                whileInView="visible"
-            >
-                {services.map((service, index) => (
-                    <motion.div
-                        key={index}
-                        variants={cardVariants}
-                    >
-                        <ServiceCard
-                            icon={service.icon}
-                            title={service.title}
-                            description={service.description}
-                        />
-                    </motion.div>
-                ))}
-            </motion.div>
-        </Container>
+            <Container className='py-20 flex flex-col gap-10 relative' id='services'>
+
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6 }}
+                >
+                    <Heading>What We Do</Heading>
+                </motion.div>
+                <motion.div
+                    className='grid grid-cols-3 gap-4 z-10'
+                    variants={containerVariants}
+                    initial="hidden"
+                    whileInView="visible"
+                >
+                    {services.map((service, index) => (
+                        <motion.div
+                            key={index}
+                            variants={cardVariants}
+                            className='relative overflow-hidden backdrop-blur-3xl'
+                        >
+                            <div className='absolute -bottom-40 -right-[50%] w-[350px] h-[350px] rounded-full bg-primary/10 blur-2xl z-0' >
+
+                            </div>
+                            <ServiceCard
+                                icon={service.icon}
+                                title={service.title}
+                                description={service.description}
+                            />
+                        </motion.div>
+                    ))}
+                </motion.div>
+            </Container>
+        </div>
     )
 }
 

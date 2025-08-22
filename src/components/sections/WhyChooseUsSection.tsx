@@ -20,7 +20,7 @@ const WhyChooseUsSection = () => {
         },
         {
             icon: <AnimatedIcon icon={SolutionIcon} size={50} />,
-            text: 'Tailored Solutions — built around your business goals'
+            text: 'Tailored Solutions built around your business goals'
         },
         {
             icon: <AnimatedIcon icon={CodeIcon} size={50} />,

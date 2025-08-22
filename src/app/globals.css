@@ -5,3 +5,7 @@
     --color-primary: #BD3F3F;
     --color-rich-black: #0D0D0D;
 }
+
+html {
+    scroll-behavior: smooth;
+}

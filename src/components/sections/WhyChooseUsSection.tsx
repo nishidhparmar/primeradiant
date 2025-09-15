@@ -71,12 +71,12 @@ const WhyChooseUsSection = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
             >
-                <Heading>Why Businesses Trust Primeradiant</Heading>
+                <Heading>Why Businesses Trust Hyper Cube</Heading>
             </motion.div>
             <div className='flex  gap-4 w-full'>
                 <div className='w-1/2'>
                     <DotLottieReact
-                        src="/pyramid.lottie"
+                        src="/tech.lottie"
                         loop
                         autoplay
                     />

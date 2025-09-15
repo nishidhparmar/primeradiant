@@ -8,8 +8,8 @@ const spaceGrotesk = Space_Grotesk({
 
 
 export const metadata: Metadata = {
-  title: "Primeradiant",
-  description: "Primeradiant",
+  title: "Hyper Cube",
+  description: "Hyper Cube",
 };
 
 export default function RootLayout({

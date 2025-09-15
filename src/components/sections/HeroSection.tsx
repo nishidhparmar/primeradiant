@@ -17,7 +17,7 @@ const HeroSection = () => {
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.5 }}
                             className='text-5xl font-semibold text-white'>Powering Your Ideas into Reality Smarter, Faster, Better</motion.div>
-                        <p className='text-lg'>At Primeradiant, we craft exceptional digital experiences from stunning UI/UX to scalable backend systems, cloud solutions, and AI-assisted development. We bring your vision to life with precision and speed.</p>
+                        <p className='text-lg'>At Hyper Cube, we craft exceptional digital experiences from stunning UI/UX to scalable backend systems, cloud solutions, and AI-assisted development. We bring your vision to life with precision and speed.</p>
                         {/* <motion.p
                             initial={{ opacity: 0, y: 100 }}
                             animate={{ opacity: 1, y: 0 }}
@@ -25,7 +25,7 @@ const HeroSection = () => {
                             className='text-lg'
                         >
                             <TypingAnimation
-                                text="At Primeradiant, we craft exceptional digital experiences from stunning UI/UX to scalable backend systems, cloud solutions, and AI-assisted development. We bring your vision to life with precision and speed."
+                                text="At Hyper Cube, we craft exceptional digital experiences from stunning UI/UX to scalable backend systems, cloud solutions, and AI-assisted development. We bring your vision to life with precision and speed."
                                 speed={50}
                                 delay={1000}
                             />
